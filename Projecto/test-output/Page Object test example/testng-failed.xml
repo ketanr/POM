@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Page Object test example]">
+  <parameter name="appURL" value="https://www.ultimatix.net"/>
+  <parameter name="browserType" value="firefox"/>
+  <listeners>
+    <listener class-name="utility.TestListener"/>
+  </listeners>
+  <test name="sample test(failed)">
+    <parameter name="browserType" value="firefox"/>
+    <classes>
+      <class name="test.MainPageTest">
+        <methods>
+          <include name="initializeTestBaseSetup"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- test.MainPageTest -->
+      <class name="test.IEvolvePageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="initializeTestBaseSetup"/>
+          <include name="verifyiePage"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- test.IEvolvePageTest -->
+    </classes>
+  </test> <!-- sample test(failed) -->
+</suite> <!-- Failed suite [Page Object test example] -->
